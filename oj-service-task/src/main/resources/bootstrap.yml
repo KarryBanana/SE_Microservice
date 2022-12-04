@@ -1,0 +1,15 @@
+server:
+  port: 8005
+spring:
+  profiles:
+    active: dev
+  application:
+    name: oj-service-task
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 123.58.251.222:8848 #Nacos服务注册中心地址
+      config:
+        server-addr: 123.58.251.222:8848 #Nacos作为配置中心地址
+        file-extension: yaml #指定yaml格式的配置
+        group: DEFAULT_GROUP
